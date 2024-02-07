@@ -1,0 +1,64 @@
+.backdrop {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.20);
+    transition: opacity var(--primary-translate), visibility var(--primary-translate), transform var(--primary-translate);
+    overflow-y:scroll ;
+}
+
+
+.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 924px;
+    height: 924px;
+    border-radius: 4px;
+    transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+
+        .backdrop.is-hidden & {
+        transform: translate(-50%, -50%) scale(0.4);
+        opacity: 0;
+        }
+    
+        .backdrop & {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+        }
+
+   
+    
+
+    
+}
+
+.container-pop_up {
+    width: 924px;
+    height: 924px;
+}
+
+.js-container {
+    width: 100%;
+}
+
+.js-class {
+    width: 16px;
+    height: 16px;
+    background-color: aliceblue;
+}
+
+.preview {
+    width: 450px;
+}
